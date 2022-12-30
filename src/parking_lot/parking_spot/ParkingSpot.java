@@ -4,7 +4,7 @@ import parking_lot.ParkingSpotType;
 import parking_lot.vehicle.Vehicle;
 
 public abstract class ParkingSpot {
-    private String spotName;
+    private String spotID;
     private boolean free;
     private Vehicle vehicle;
     private final ParkingSpotType spotType;
@@ -15,14 +15,14 @@ public abstract class ParkingSpot {
         this.spotType = spotType;
     }
 
-    public String getSpotName() {
+    public String getSpotID() {
 
-        return spotName;
+        return spotID;
     }
 
-    public void setNumber(String spotNamer) {
+    public void setNumber(String spotID) {
 
-        this.spotName = spotName;
+        this.spotID = spotID;
     }
 
     public boolean isFree() {
@@ -61,6 +61,7 @@ public abstract class ParkingSpot {
         this.vehicle = null;
         free = true;
     }
+
 
 
 }

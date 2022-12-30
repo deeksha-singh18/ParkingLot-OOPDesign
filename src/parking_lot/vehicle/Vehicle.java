@@ -22,22 +22,27 @@ public class Vehicle {
 
 
     public String getLicenseNumber() {
+
         return licenseNumber;
     }
 
     public void setLicenseNumber(String licenseNumber) {
+
         this.licenseNumber = licenseNumber;
     }
 
     public VehicleType getType() {
+
         return type;
     }
 
     public ParkingTicket getTicket() {
+
         return ticket;
     }
 
     public void setTicket(ParkingTicket ticket) {
+
         this.ticket = ticket;
     }
 }

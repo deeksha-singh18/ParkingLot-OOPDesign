@@ -4,9 +4,23 @@ import parking_lot.vehicle.Vehicle;
 
 public class EntrancePanel {
 
-    private String id;
 
-    public ParkingTicket getParkingTicket(Vehicle vehicle) {
+    ParkingLot parkingLot;
+    ParkingDisplayBoard displayBoard;
 
-    }
+
+
+
+
+    Boolean checking =parkingLot.isAllFull();
+
+    Boolean checkingspotsspace = displayBoard.showParkingDisplayBoard();
+
+
+
+
+
+
+
+
 }

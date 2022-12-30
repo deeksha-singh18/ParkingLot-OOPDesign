@@ -7,16 +7,46 @@ import static parking_lot.VehicleType.*;
 
 public class ExitPanel {
 
-        private String id;
+        private Vehicle vehicle;
+        private int cost;
+        private ParkingLot parkingLot;
 
 
         public String getId(){
+
             return getId();
         }
 
 
+
+        public void vacateSpot(ParkingSpot spot){
+            spot.removeVehicle();
+            switch (spot.getSpotType()) {
+                case HANDICAPPED:
+                    parkingLot.setHandicappedSpotCount(parkingLot.getHandicappedSpotCount()-1);
+                    break;
+                case COMPACT:
+                    parkingLot.setCompactSpotCount(parkingLot.getCompactSpotCount()-1);
+                    break;
+                case LARGE:
+                    parkingLot.setLargeSpotCount(parkingLot.getLargeSpotCount()-1);
+                    break;
+                case MOTORBIKE:
+                    parkingLot.setMotorbikeSpotCount(parkingLot.getMotorbikeSpotCount()-1);
+                    break;
+                case ELECTRIC:
+                    parkingLot.setElectricSpotCount(parkingLot.getElectricSpotCount()-1);
+                    break;
+                default:
+            }
+
+
+        }
+
+
+
+
         public int makePayment(Vehicle vehicle){
-            int cost=0;
 
             if(vehicle.getType()==CAR){
                 cost = 30;
@@ -37,8 +67,7 @@ public class ExitPanel {
         }
 
 
-        public static class EntrancePanel {
 
 
-        }
+
 }

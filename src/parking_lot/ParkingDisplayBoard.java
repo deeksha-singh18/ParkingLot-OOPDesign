@@ -4,12 +4,24 @@ import parking_lot.parking_spot.*;
 
 public class ParkingDisplayBoard {
 
-    private String id;
+    ParkingLot parkingLot;
 
 
 
-    public void showMessage() {
-        System.out.println("");
+    public boolean showParkingDisplayBoard() {
+        try {
+            if (parkingLot.isAllFull()) {
+
+                System.out.println("All spots are occupied");
+                return true;
+            }
+        }
+
+        catch(NullPointerException e){
+            return false;
+        }
+        return false;
+
     }
 
 

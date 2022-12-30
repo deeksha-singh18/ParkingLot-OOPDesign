@@ -2,18 +2,25 @@ package parking_lot;
 
 import parking_lot.vehicle.Vehicle;
 
+import java.util.HashMap;
+
+import static parking_lot.ParkingFloor.parkingSlots;
+
 public abstract class ParkingSpot {
     private String spotName;
     private boolean free;
     private Vehicle vehicle;
-    private final ParkingSpotType spotType;
+    private ParkingSpotType spotType;
+
+    private ParkingLot parkingLot;
+    private ParkingFloor parkingFloor;
 
 
 
     public ParkingSpot(ParkingSpotType spotType) {
         this.spotName=spotName;
         this.spotType = spotType;
-    }
+            }
 
     public String getSpotName() {
 
@@ -61,5 +68,9 @@ public abstract class ParkingSpot {
         this.vehicle = null;
         free = true;
     }
+
+
+
+
 }
 
